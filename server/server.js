@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('server/public'));
 
 // ROUTES
-// app.use('/tasks', tasksRouter);
+app.use('/tasks', tasksRouter);
 
 app.listen(PORT, () => {
     console.log('listen on port:', PORT);
