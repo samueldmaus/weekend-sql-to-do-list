@@ -7,7 +7,7 @@ CREATE TABLE "tasks" (
 );
 
 INSERT INTO "tasks" ("task_name", "task_note", "task_priority")
-VALUES ('Grocery Shop', 'eggs, bacon, milk, bagels', 'Low'),
+VALUES ('Groceries', 'eggs, bacon, milk, bagels', 'Low'),
 ('Homework', 'read chapter 2 & take notes', 'High'),
 ('Pick-up', 'pick mom from airport', 'High'),
 ('Garbage', 'take out garbage', 'Medium');

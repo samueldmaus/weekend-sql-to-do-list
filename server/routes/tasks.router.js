@@ -11,7 +11,18 @@ taskRouter.get('/', (req, res) => {
     }).catch((error) => {
         console.log('error in GET:', error);
         res.sendStatus(500);
-    })
-})
+    });
+});
+
+taskRouter.post('/', (req, res) => {
+    let query = `INSERT INTO "tasks" ("task_name", "task_note", "task_priority")
+    VALUES ($1, $2, $3);`;
+    pool.query(query, [req.body.task_name, req.body.task_note, req.body.task_priority]).then((result) => {
+        res.sendStatus(201);
+    }).catch((error) => {
+        console.log('error in POST:', error);
+        res.sendStatus(500);
+    });
+});
 
 module.exports = taskRouter;
