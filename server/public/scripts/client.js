@@ -6,6 +6,7 @@ function readyNow() {
     getTasks();
     $('#submitBtn').on('click', addTask);
     $('#taskList').on('click', '.completeBox', updateCompleteStatus);
+    $('#taskList').on('click', '.deleteBtn', deleteTask)
 }
 
 // get tasks from db
@@ -75,7 +76,6 @@ function addTask() {
 function updateCompleteStatus() {
     let taskId = $(this).closest('tr').data('task').id;
     let taskStatus = $(this).closest('tr').data('task').task_completed;
-    let el = $(this).value
     console.log(taskId, taskStatus);
     $.ajax({
         method: 'PUT',
@@ -87,5 +87,19 @@ function updateCompleteStatus() {
         getTasks();
     }).catch(function(error) {
         console.log('error in PUT:', error);
+    });
+};
+
+// deletes task from DOM and db
+function deleteTask() {
+    let clickedId = $(this).closest('tr').data('task').id;
+    $.ajax({
+        method: 'DELETE',
+        url: `/tasks/${clickedId}`,
+    }).then(function(response) {
+        getTasks();
+    }).catch(function(error) {
+        console.log('error in DELETE:', error);
     })
+
 }

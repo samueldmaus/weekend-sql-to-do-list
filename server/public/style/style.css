@@ -1,21 +1,27 @@
+* {
+    font-family: sans-serif, "Helvetica";
+}
 h1 {
-    color: teal;
-    text-shadow: 1px 1px black;
+    color: limegreen;
+    text-shadow: 1px 2px black;
+    font-size: 45;
+    text-align: center;
 }
 
 table {
     border: 1px black;
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
+    font-size: 1.1em;
     min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
 }
 
 table thead tr {
-    background-color: teal;
+    background-color: limegreen;
     color: white;
     text-align: left;
     font-weight: bold;
@@ -35,7 +41,7 @@ tbody tr:nth-of-type(even) {
 }
 
 tbody tr:last-of-type {
-    border-bottom: 2px solid teal;
+    border-bottom: 2px solid limegreen;
 }
 
 .completedTask {
@@ -44,4 +50,8 @@ tbody tr:last-of-type {
 
 .highImportance {
     color: red;
+}
+
+#inputDiv {
+    display: block;
 }
