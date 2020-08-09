@@ -22,6 +22,9 @@ h1 {
     overflow: hidden;
 }
 
+.deleteBtn:hover {
+    background-color: rgba(129, 6, 6, 0.582);
+}
 table {
     border: 1px black;
     border-collapse: collapse;
