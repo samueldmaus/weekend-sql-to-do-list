@@ -69,6 +69,9 @@ function addTask() {
         data: newTask
     }).then(function(response) {
         getTasks();
+        $('#nameInput').val('');
+        $('#noteInput').val('');
+        $('#priorityInput').val('Low');
     }).catch(function(error) {
         console.log('error in POST:', error);
     });
