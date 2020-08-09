@@ -16,6 +16,7 @@ This application is a to-do list application. The user can enter in a name, note
 1. Fork repository
 2. Clone repository to machine using terminal
 3. Install Express and PG node modules using 'npm install' command in terminal in VS code
+5. Create database using command found in database.sql file
 4. Start server using 'npm start' command
 5. Enter in to-do task name with note and priority level
 6. Click "Add Task" to add task to to-do list
