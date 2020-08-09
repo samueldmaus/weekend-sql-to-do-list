@@ -7,7 +7,7 @@ This application is a to-do list application. The user can enter in a name, note
 ## Screenshots
 
 
-## ## Prerequisites
+## Prerequisites
 - [jQuery](https://jquery.com)
 - [Node.js](https://nodejs.org)
 - [SweetAlert](https://sweetalert.js.org/guides/)
