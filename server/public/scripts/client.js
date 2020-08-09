@@ -1,3 +1,4 @@
+
 console.log('gg');
 
 $(document).ready(readyNow);
@@ -6,7 +7,7 @@ function readyNow() {
     getTasks();
     $('#submitBtn').on('click', addTask);
     $('#taskList').on('click', '.completeBox', updateCompleteStatus);
-    $('#taskList').on('click', '.deleteBtn', deleteTask)
+    $('#taskList').on('click', '.deleteBtn', confirmDelete)
 }
 
 // get tasks from db
@@ -91,8 +92,7 @@ function updateCompleteStatus() {
 };
 
 // deletes task from DOM and db
-function deleteTask() {
-    let clickedId = $(this).closest('tr').data('task').id;
+function deleteTask(clickedId) {
     $.ajax({
         method: 'DELETE',
         url: `/tasks/${clickedId}`,
@@ -100,6 +100,22 @@ function deleteTask() {
         getTasks();
     }).catch(function(error) {
         console.log('error in DELETE:', error);
-    })
+    });
+};
 
-}
+function confirmDelete() {
+    let clickedId = $(this).closest('tr').data('task').id;
+    event.preventDefault();
+    sweetAlert({
+        text: 'Are you sure you wish to DELETE this task?',
+        icon: 'warning',
+        buttons: {
+            accept: true,
+            cancel: 'Cancel'
+        }
+    }).then(function(value) {
+        if(value) {
+            deleteTask(clickedId);
+        };
+    });
+};
