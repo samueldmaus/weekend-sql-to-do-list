@@ -1,11 +1,25 @@
-* {
+body {
     font-family: sans-serif, "Helvetica";
+    background-color: lightgray;
 }
 h1 {
     color: limegreen;
     text-shadow: 1px 2px black;
-    font-size: 45;
+    font-size: 45px;
     text-align: center;
+}
+
+#submitBtn {
+    color: white;
+    background-color: green;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+}
+
+.deleteBtn {
+    background-color: red;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
 }
 
 table {
@@ -41,17 +55,21 @@ tbody tr:nth-of-type(even) {
 }
 
 tbody tr:last-of-type {
-    border-bottom: 2px solid limegreen;
+    border-bottom: 4px solid limegreen;
 }
 
 .completedTask {
     text-decoration: line-through;
+    text-decoration-color: black;
+    text-decoration-thickness: 100%;
+    color: grey;
 }
 
 .highImportance {
     color: red;
 }
 
-#inputDiv {
-    display: block;
+input {
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
 }
