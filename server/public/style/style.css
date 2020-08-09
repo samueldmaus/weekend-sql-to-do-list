@@ -1,0 +1,47 @@
+h1 {
+    color: teal;
+    text-shadow: 1px 1px black;
+}
+
+table {
+    border: 1px black;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+    background-color: teal;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid lightgrey;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid teal;
+}
+
+.completedTask {
+    text-decoration: line-through;
+}
+
+.highImportance {
+    color: red;
+}
